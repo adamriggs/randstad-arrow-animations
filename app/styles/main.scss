@@ -30,6 +30,8 @@ body {
   padding: 0.2em 0;
 }
 
+// Animations
+$animation_duration: 4s;
 
 .hero__background__animation {
   position: fixed;
@@ -44,39 +46,85 @@ body {
   .arrow__1 {
     left: 500px;
     top: 0px;
-    animation: arrow1animation 5s infinite ease-out;
+    animation: arrow1Animation $animation_duration infinite;
   }
 
   .arrow__2 {
     left: 250px;
     top: 210px;
+    animation: arrow2Animation $animation_duration infinite;
   }
 
   .arrow__3 {
     left: 0px;
     top: 420px;
+    animation: arrow3Animation $animation_duration infinite;
   }
 
 }
 
-
-// Animations
-
-@keyframes arrow1animation {
+@keyframes arrow1Animation {
   0% {
     left: -300px;
   }
 
-  90% {
-    left: 800px;
+  20% {
+    left: 900px;
+    animation-timing-function: ease-in;
   }
 
   99% {
     left: 1200px;
+    animation-timing-function: linear;
   }
 
   100% {
-    left: 1500px;
+    left: 1300px;
+    animation-timing-function: ease-out;
+  }
+
+}
+
+@keyframes arrow2Animation {
+  0% {
+    left: -550px;
+  }
+
+  30% {
+    left: 650px;
+    animation-timing-function: ease-in;
+  }
+
+  99% {
+    left: 950px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    left: 1150px;
+    animation-timing-function: ease-out;
+  }
+
+}
+
+@keyframes arrow3Animation {
+  0% {
+    left: -300px;
+  }
+
+  60% {
+    left: 400px;
+    animation-timing-function: ease-in;
+  }
+
+  99% {
+    left: 700px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    left: 950px;
+    animation-timing-function: ease-out;
   }
 
 }
